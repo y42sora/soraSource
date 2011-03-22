@@ -54,6 +54,24 @@ using namespace std;
 
 
 char getBF(string str){
+	if(str == "ポ～ン") return '>';
+	if(str == "ポポ～ン") return '<';
+	if(str == "ポポポ～ン") return '+';
+	if(str == "ポポポポ～ン") return '-';
+	if(str == "ポポポポポ～ン") return '.';
+	if(str == "ポポポポポポ～ン") return ',';
+	if(str == "ポポポポポポポ～ン") return '[';
+	if(str == "ポポポポポポポポ～ン") return ']';
+
+	if(str == "ポーン") return '>';
+	if(str == "ポポーン") return '<';
+	if(str == "ポポポーン") return '+';
+	if(str == "ポポポポーン") return '-';
+	if(str == "ポポポポポーン") return '.';
+	if(str == "ポポポポポポーン") return ',';
+	if(str == "ポポポポポポポーン") return '[';
+	if(str == "ポポポポポポポポーン") return ']';
+
 	if(str == "ぽ～ん") return '>';
 	if(str == "ぽぽ～ん") return '<';
 	if(str == "ぽぽぽ～ん") return '+';
