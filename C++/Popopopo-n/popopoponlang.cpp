@@ -54,17 +54,26 @@ using namespace std;
 
 
 char getBF(string str){
+	if(str == "ぽ～ん") return '>';
+	if(str == "ぽぽ～ん") return '<';
+	if(str == "ぽぽぽ～ん") return '+';
+	if(str == "ぽぽぽぽ～ん") return '-';
+	if(str == "ぽぽぽぽぽ～ん") return '.';
+	if(str == "ぽぽぽぽぽぽ～ん") return ',';
+	if(str == "ぽぽぽぽぽぽぽ～ん") return '[';
+	if(str == "ぽぽぽぽぽぽぽぽ～ん") return ']';
 
-	if(str == "�ہ`��") return '>';
-	if(str == "�ۂہ`��") return '<';
-	if(str == "�ۂۂہ`��") return '+';
-	if(str == "�ۂۂۂہ`��") return '-';
-	if(str == "�ۂۂۂۂہ`��") return '.';
-	if(str == "�ۂۂۂۂۂہ`��") return ',';
-	if(str == "�ۂۂۂۂۂۂہ`��") return '[';
-	if(str == "�ۂۂۂۂۂۂۂہ`��") return ']';
+	if(str == "ぽーん") return '>';
+	if(str == "ぽぽーん") return '<';
+	if(str == "ぽぽぽーん") return '+';
+	if(str == "ぽぽぽぽーん") return '-';
+	if(str == "ぽぽぽぽぽーん") return '.';
+	if(str == "ぽぽぽぽぽぽーん") return ',';
+	if(str == "ぽぽぽぽぽぽぽーん") return '[';
+	if(str == "ぽぽぽぽぽぽぽぽーん") return ']';
 	return -1;
 }
+
 
 int main(int argc, char **argv) {
   int pc, xc, prog_len, l = 0;
