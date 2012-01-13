@@ -1,7 +1,6 @@
 '''
 Created on 2011/10/25
 
-@author: y42sora
 
 from here
 http://handasse.blogspot.com/2008/04/python_16.html
