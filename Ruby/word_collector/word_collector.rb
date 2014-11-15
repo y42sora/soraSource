@@ -3,6 +3,8 @@ require 'set'
 
 root_folder_path = ARGV[0]
 
+word_list = {}
+
 select_ext = {".cpp" => 0,
   ".h" => 0,
   ".yml" => 0,
@@ -33,7 +35,20 @@ Find.find(root_folder_path) {|f|
     reject_ext[ext] += 1
     next
   end
+
+  word_list[ext] = {} unless word_list.has_key? ext
+
+  open(f) do |file|
+    file.each_char do |char|
+      next if 127 < char.ord
+      char = char.downcase
+      word_list[ext][char] = 0 unless word_list[ext].has_key? char
+      word_list[ext][char] += 1
+
+    end
+  end
 }
 
 p reject_ext
 p select_ext
+p word_list
